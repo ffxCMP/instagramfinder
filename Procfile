@@ -1,1 +1,1 @@
-worker: python uploader.py
+worker: python instagramFinder.py
