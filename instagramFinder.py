@@ -22,7 +22,6 @@ def send_message(chat_id, text):
 
 def th_f(start,end):
     for i in range(start,end):
-        print(i)
         try:
             b = gis.generate_signature(lines[i].strip())
             raznica = gis.normalized_distance(a, b)
