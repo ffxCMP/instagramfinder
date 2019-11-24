@@ -29,8 +29,9 @@ def th_f(start,end):
                 print('Нашел похожу картинку. Остылаю в телеграм, проверьте почту!:)')
                 chat_id = str(221730817)
                 message = lines[i].strip()
-                send_message(chat_id,f'Нашел эту картинку в INSTAGRAM. Сравните ее с той, что вы вставляли в программу! {message}')
+                send_message(chat_id,f'Нашел INSTAGRAM: {message}')
         except Exception as E:
+            print(E)
             continue
 
 if __name__ == "__main__":
