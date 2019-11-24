@@ -29,7 +29,11 @@ def th_f(start,end):
                 print('Нашел похожу картинку. Остылаю в телеграм, проверьте почту!:)')
                 chat_id = str(221730817)
                 message = lines[i].strip()
-                send_message(chat_id,f'Нашел INSTAGRAM: {message}')
+                params = {'json': 'true',
+                          'url': message}
+                data = requests.get(f'https://clck.ru/--?', params=params)
+                short_url = data.json()[0]
+                send_message(chat_id,f'Нашел INSTAGRAM: {short_url}')
         except Exception as E:
             print(E)
             continue
